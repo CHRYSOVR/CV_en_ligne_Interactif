@@ -1,0 +1,19 @@
+/*GENERAL*/
+
+body{
+    font-family: 'Lato', sans-serif;
+   
+}
+h1,h2,h3,h4,h5,h6{
+    font-weight: bold;
+}
+/*ABOUT*/
+#about{
+    background-color: #1911e9;
+     
+}
+.profile-picture{
+    text-align: center;
+    margin: 0 auto 30px;
+    
+}

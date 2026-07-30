@@ -1,0 +1,515 @@
+/* GENERAL */
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #333333;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+}
+
+.divider {
+    width: 80px;
+    height: 2px;
+    background-color: #ff0000;
+    margin: 0 auto 18px;
+}
+
+.divider.white {
+    background-color: #ff0000;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    max-width: 220px;
+    width: 100%;
+    height: auto;
+}
+
+.heading {
+    text-align: center;
+    color: #222222;
+    margin-top: 16px;
+    position: relative;
+    z-index: 2;
+}
+
+.heading h2 {
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+}
+
+.text-muted-custom {
+    color: #6c757d !important;
+}
+
+/* NAVBAR / MENU */
+.custom-navbar {
+    background-color: #ffffff !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    border-bottom: 1px solid #e1e4e8;
+}
+
+.custom-navbar .navbar-brand,
+.custom-navbar .nav-link {
+    color: #333333 !important;
+    transition: color 0.3s ease;
+}
+
+.custom-navbar .nav-link:hover {
+    color: #ff0000 !important;
+    box-shadow: 0 4px 10px rgba(255, 0, 0, 0.2);
+    transform: translateY(-2px);
+    
+}
+
+/* FUTURISTIC CODE FLOATING ANIMATIONS */
+@keyframes floatSlow {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-15px) rotate(4deg);
+    }
+}
+
+@keyframes floatFast {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-20px) rotate(-6deg);
+    }
+}
+
+/* ABOUT SECTION (Futuristic Code Design) */
+#about {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 100%;
+    padding-top: 110px;
+    padding-bottom: 60px;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Éléments de code futuristes décoratifs en arrière-plan */
+#about::before {
+    content: "</>";
+    position: absolute;
+    top: 15%;
+    left: 8%;
+    font-family: 'Courier New', monospace;
+    font-size: 4.5rem;
+    font-weight: bold;
+    color: rgba(255, 0, 0, 0.07);
+    pointer-events: none;
+    z-index: 1;
+    animation: floatSlow 7s ease-in-out infinite;
+}
+
+#about::after {
+    content: "{ }";
+    position: absolute;
+    bottom: 12%;
+    right: 8%;
+    font-family: 'Courier New', monospace;
+    font-size: 5rem;
+    font-weight: bold;
+    color: rgba(255, 0, 0, 0.07);
+    pointer-events: none;
+    z-index: 1;
+    animation: floatFast 9s ease-in-out infinite;
+}
+
+/* Ajout d'icônes de langages de code supplémentaires via des classes fictives gérées par CSS */
+#about .container {
+    max-width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.profile-picture {
+    position: relative;
+}
+
+/* Effet badge code flottant autour de la photo */
+.profile-picture::before {
+    content: "DEV/FLOW";
+    position: absolute;
+    top: -20px;
+    left: 10px;
+    background: #ff0000;
+    color: white;
+    font-size: 0.75rem;
+    font-family: monospace;
+    padding: 3px 8px;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(255, 0, 0, 0.2);
+    letter-spacing: 1px;
+    animation: floatSlow 5s ease-in-out infinite;
+    z-index: 3;
+}
+
+.profile-picture img {
+    border: 3px solid #ff0000;
+    padding: 4px;
+    background-color: #f8f9fa;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-picture img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 20px rgba(255, 0, 0, 0.2);
+}
+
+#about .heading h1 {
+    color: #222222;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    font-size: 2.2rem;
+}
+
+#about .heading h3 {
+    font-size: 1.25rem;
+    margin-bottom: 16px;
+    color: #0056b3;
+}
+
+#about p {
+    color: #555555;
+    line-height: 1.6;
+}
+
+.btn-danger {
+    background-color: #ff0000;
+    border-color: #ff0000;
+    color: white;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.btn-danger:hover {
+    background: #cc0000;
+    border-color: #cc0000;
+    color: white;
+    box-shadow: 0 4px 10px rgba(255, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+/* SKILLS */
+#skills {
+    padding: 50px 15px;
+    max-width: 1100px;
+    margin: 0 auto;
+    background-color: #ffffff;
+}
+
+#skills .heading h2 {
+    color: #ff0000;
+}
+
+#skills .progress {
+    height: 35px;
+    margin: 20px 10px;
+    background-color: #f1f3f5;
+    border: 1px solid #e1e4e8;
+    border-radius: 6px;
+}
+
+#skills .progress:last-child {
+    margin-bottom: 0;
+}
+
+#skills .progress-bar {
+    background-color: #ff0000;
+    border-radius: 4px;
+}
+
+#skills .progress-bar h5 {
+    text-shadow: none;
+    color: white;
+    margin-bottom: 0;
+    font-size: 0.95rem;
+}
+
+/* EXPERIENCE & EDUCATION TIMELINES */
+#Experience, #education {
+    background-color: #f8f9fa;
+    width: 100%;
+    max-width: 100%;
+    padding: 50px 0;
+    margin: 0;
+    border-top: 1px solid #e1e4e8;
+    border-bottom: 1px solid #e1e4e8;
+}
+
+#Experience .heading h2,
+#education .heading h2 {
+    color: #222222;
+}
+
+.timeline-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.timeline {
+    position: relative;
+    padding: 30px 0;
+    list-style: none;
+}
+
+.timeline:before {
+    content: " ";
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    width: 4px;
+    background-color: #ff0000;
+    left: 50%;
+    margin-left: -2px;
+}
+
+.timeline > li {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.timeline > li::before,
+.timeline > li::after {
+    content: " ";
+    display: table;
+}
+
+.timeline > li::after {
+    clear: both;
+}
+
+/* Timeline Panels & Badges */
+.timeline-panel-container,
+.timeline-panel-container-inverted {
+    width: 50%;
+    position: relative;
+    padding: 0 20px;
+}
+
+.timeline-panel-container {
+    float: left;
+    text-align: right;
+}
+
+.timeline-panel-container-inverted {
+    float: right;
+    text-align: left;
+}
+
+.timeline-badge {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 16px;
+    left: 50%;
+    margin-left: -20px;
+    border-radius: 50%;
+    background-color: #ff0000;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    font-size: 1.2rem;
+    z-index: 10;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+}
+
+.timeline-panel {
+    padding: 20px;
+    background: #ffffff;
+    border: 1px solid #e1e4e8;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    position: relative;
+    transition: border-color 0.3s ease;
+}
+
+.timeline-panel:hover {
+    border-color: #ff0000;
+}
+
+.timeline-heading h3 {
+    font-size: 1.2rem;
+    color: #222222;
+    margin-bottom: 5px;
+}
+
+.timeline-heading h4 {
+    font-size: 1rem;
+    color: #0056b3;
+    margin-bottom: 10px;
+}
+
+.timeline-body p {
+    margin-bottom: 8px;
+    color: #6c757d;
+}
+
+/* PORTFOLIO SECTION */
+#portfolio {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 100%;
+    padding: 50px 0;
+    margin: 0;
+}
+
+#portfolio .heading h2 {
+    color: #222222;
+}
+
+.portfolio-card {
+    background: #ffffff;
+    border: 1px solid #e1e4e8;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    height: 100%;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-5px);
+    border-color: #ff0000;
+}
+
+.portfolio-card .card-title {
+    color: #222222;
+}
+
+.portfolio-card .card-subtitle {
+    color: #0056b3 !important;
+    font-size: 0.9rem;
+}
+
+.portfolio-card .card-text {
+    color: #6c757d;
+}
+
+/* RECOMMENDATIONS SECTION */
+#recommendations {
+    background-color: #f8f9fa;
+    width: 100%;
+    max-width: 100%;
+    padding: 60px 0;
+    margin: 0;
+    border-top: 1px solid #e1e4e8;
+    border-bottom: 1px solid #e1e4e8;
+}
+
+#recommendations .heading h2 {
+    color: #222222;
+}
+
+.recommendation-box {
+    background: #ffffff;
+    border: 1px solid #e1e4e8;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    color: #333333;
+}
+
+.recommendation-box h5 {
+    color: #ff0000;
+    font-size: 1rem;
+}
+
+#recommendations .carousel-control-prev-icon,
+#recommendations .carousel-control-next-icon {
+    filter: invert(1);
+}
+
+/* FOOTER */
+#footer {
+    background-color: #212529;
+    border-top: 1px solid #e1e4e8;
+    color: white;
+}
+
+.social-links a:hover {
+    color: #ff0000 !important;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 991px) {
+    #about .heading h1 {
+        font-size: 1.8rem;
+    }
+    #about .heading h3 {
+        font-size: 1.1rem;
+    }
+    .btn-danger {
+        font-size: 13px;
+        padding: 8px 16px;
+    }
+    #skills .progress {
+        height: 32px;
+    }
+}
+
+@media (max-width: 767px) {
+    section {
+        padding: 35px 0;
+    }
+    .heading h2 {
+        font-size: 1.4rem;
+    }
+    #about .heading h1 {
+        font-size: 1.5rem;
+    }
+    #about .heading h3 {
+        font-size: 1rem;
+    }
+    .profile-picture {
+        margin-bottom: 20px;
+    }
+    
+    .timeline:before {
+        left: 30px;
+    }
+    .timeline-panel-container,
+    .timeline-panel-container-inverted {
+        width: 100%;
+        float: none;
+        text-align: left;
+        padding-left: 60px;
+        padding-right: 15px;
+    }
+    .timeline-badge {
+        left: 30px;
+        margin-left: -20px;
+    }
+}
