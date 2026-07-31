@@ -8,6 +8,7 @@ html, body {
     padding: 0;
     background-color: #ffffff;
     color: #333333;
+    scroll-behavior: smooth;
 }
 
 *, *::before, *::after {
@@ -16,6 +17,16 @@ html, body {
 
 h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: #ff0000;
+    text-decoration: none;
 }
 
 .divider {
@@ -55,10 +66,6 @@ img {
     letter-spacing: 1px;
 }
 
-.text-muted-custom {
-    color: #6c757d !important;
-}
-
 /* NAVBAR / MENU */
 .custom-navbar {
     background-color: #ffffff !important;
@@ -76,29 +83,30 @@ img {
     color: #ff0000 !important;
     box-shadow: 0 4px 10px rgba(255, 0, 0, 0.2);
     transform: translateY(-2px);
+}
+
+.custom-navbar .navbar-toggler {
+    border-color: #ced4da;
+    padding: 0.5rem 0.75rem;
+}
+
+.custom-navbar .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%2851, 51, 51, 0.9%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E" );
     
 }
 
-/* FUTURISTIC CODE FLOATING ANIMATIONS */
+/* FLOATING ANIMATIONS */
 @keyframes floatSlow {
-    0%, 100% {
-        transform: translateY(0px) rotate(0deg);
-    }
-    50% {
-        transform: translateY(-15px) rotate(4deg);
-    }
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-15px) rotate(4deg); }
 }
 
 @keyframes floatFast {
-    0%, 100% {
-        transform: translateY(0px) rotate(0deg);
-    }
-    50% {
-        transform: translateY(-20px) rotate(-6deg);
-    }
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(-6deg); }
 }
 
-/* ABOUT SECTION (Futuristic Code Design) */
+/* ABOUT SECTION */
 #about {
     background-color: #ffffff;
     width: 100%;
@@ -110,7 +118,6 @@ img {
     overflow: hidden;
 }
 
-/* Éléments de code futuristes décoratifs en arrière-plan */
 #about::before {
     content: "</>";
     position: absolute;
@@ -139,7 +146,6 @@ img {
     animation: floatFast 9s ease-in-out infinite;
 }
 
-/* Ajout d'icônes de langages de code supplémentaires via des classes fictives gérées par CSS */
 #about .container {
     max-width: 1200px;
     padding-left: 15px;
@@ -153,7 +159,6 @@ img {
     position: relative;
 }
 
-/* Effet badge code flottant autour de la photo */
 .profile-picture::before {
     content: "DEV/FLOW";
     position: absolute;
@@ -222,40 +227,97 @@ img {
     transform: translateY(-2px);
 }
 
-/* SKILLS */
+/* DESIGN MODERNE POUR LA SECTION COMPÉTENCES (SIMPLE ICONS) */
 #skills {
-    padding: 50px 15px;
-    max-width: 1100px;
+    padding: 70px 15px;
+    background-color: #fcfdfe;
+    position: relative;
+    max-width: 1200px;
     margin: 0 auto;
-    background-color: #ffffff;
 }
 
 #skills .heading h2 {
-    color: #ff0000;
+    color: #222222;
 }
 
-#skills .progress {
-    height: 35px;
-    margin: 20px 10px;
-    background-color: #f1f3f5;
-    border: 1px solid #e1e4e8;
-    border-radius: 6px;
+.skills-category-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    transition: all 0.35s ease;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
 }
 
-#skills .progress:last-child {
-    margin-bottom: 0;
+.skills-category-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #ff0000, #ff6b6b);
+    opacity: 0.8;
 }
 
-#skills .progress-bar {
-    background-color: #ff0000;
-    border-radius: 4px;
+.skills-category-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(255, 0, 0, 0.08);
+    border-color: rgba(255, 0, 0, 0.3);
 }
 
-#skills .progress-bar h5 {
-    text-shadow: none;
-    color: white;
-    margin-bottom: 0;
+.category-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #1a202c;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f1f5f9;
+    display: flex;
+    align-items: center;
+}
+
+.skills-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.skill-pill {
+    display: flex;
+    align-items: center;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    padding: 10px 14px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.skill-pill:hover {
+    background: #ffffff;
+    border-color: #ff0000;
+    transform: translateX(4px);
+    box-shadow: 0 4px 12px rgba(255, 0, 0, 0.1);
+}
+
+.skill-si-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.skill-pill:hover .skill-si-icon {
+    transform: scale(1.15);
+}
+
+.skill-pill span {
     font-size: 0.95rem;
+    font-weight: 600;
+    color: #2d3748;
 }
 
 /* EXPERIENCE & EDUCATION TIMELINES */
@@ -313,7 +375,6 @@ img {
     clear: both;
 }
 
-/* Timeline Panels & Badges */
 .timeline-panel-container,
 .timeline-panel-container-inverted {
     width: 50%;
@@ -463,8 +524,65 @@ img {
     color: #ff0000 !important;
 }
 
+/* BOUTON RETOUR EN HAUT (STYLE FLOTTANT) */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #ff0000;
+    color: white;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    transition: all 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    text-decoration: none;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background-color: #cc0000;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(255, 0, 0, 0.3);
+    text-decoration: none;
+}
+
 /* RESPONSIVE DESIGN */
-@media (max-width: 991px) {
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        background-color: #ffffff;
+        padding: 15px;
+        border-radius: 6px;
+        margin-top: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        border: 1px solid #e1e4e8;
+    }
+
+    .custom-navbar .nav-item {
+        text-align: center;
+        border-bottom: 1px solid #f1f3f5;
+    }
+
+    .custom-navbar .nav-item:last-child {
+        border-bottom: none;
+    }
+
+    .custom-navbar .nav-link {
+        padding: 10px 0;
+    }
+
     #about .heading h1 {
         font-size: 1.8rem;
     }
@@ -474,9 +592,6 @@ img {
     .btn-danger {
         font-size: 13px;
         padding: 8px 16px;
-    }
-    #skills .progress {
-        height: 32px;
     }
 }
 
