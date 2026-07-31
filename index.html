@@ -36,12 +36,12 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
     />
-    <script src="js/script.js"></script>
+    <script src="js/script.js" defer></script>
     <title>Mon Portfolio</title>
   </head>
   <body>
     <!-- MENU / NAVBAR -->
-    <nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
+    <nav class="navbar navbar-expand-lg navbar-dark custom-navbar fixed-top">
       <div class="container">
         <a class="navbar-brand font-weight-bold" href="#about"
           >Chrys Sanne-Tia</a
@@ -110,182 +110,114 @@
       </div>
     </section>
 
-    <!-- SECTION SKILLS -->
+    <!-- SECTION SKILLS (Design Moderne & Catégorisé avec Simple Icons) -->
     <section id="skills">
       <div class="divider"></div>
       <div class="heading">
-        <h2>Compétences</h2>
+        <h2>Compétences Techniques</h2>
       </div>
       <div class="container">
         <div class="row">
-          <div class="col-12 col-md-6 col-lg-4 mb-4">
-            <div class="progress">
-              <div
-                class="progress-bar"
-                role="progressbar"
-                style="width: 95%"
-                aria-valuenow="95"
-                aria-valuemin="0"
-                aria-valuemax="100"
-              >
-                <h5>HTML  95%</h5>
+          
+          <!-- Catégorie 1: Front-End -->
+          <div class="col-12 col-md-4 mb-4">
+            <div class="skills-category-card p-4">
+              <h4 class="category-title"><i class="bi bi-code-slash text-danger mr-2"></i> Front-End</h4>
+              <div class="skills-grid">
+                <div class="skill-pill">
+                  <a href="https://developer.mozilla.org/fr/docs/Web/HTML">
+                  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/html5.svg" alt="HTML5" class="skill-si-icon">
+                  <span>HTML5</span>
+                  </a>
+                </div>
+                <div class="skill-pill">
+                  <a href="https://devdocs.io/css/">
+                  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/css3.svg" alt="CSS3" class="skill-si-icon">
+                  <span>CSS3</span>
+                  </a>
+                </div>
+                <div class="skill-pill">
+                  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">
+                  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/javascript.svg" alt="JavaScript" class="skill-si-icon">
+                  <span>JavaScript</span>
+                  </a>
+                </div>
+                <div class="skill-pill">
+                  <a href="https://getbootstrap.com/">
+                  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/bootstrap.svg" alt="Bootstrap" class="skill-si-icon">
+                  <span>Bootstrap</span>
+                  </a>
+                </div>
+                <div class="skill-pill">
+                  <a href="https://react.dev/">
+                  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/react.svg" alt="React JS" class="skill-si-icon">
+                  <span>React JS</span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
-          <div class="col-12 col-md-6 col-lg-4 mb-4">
-            <div class="progress">
-              <div
-                class="progress-bar"
-                role="progressbar"
-                style="width: 90%"
-                aria-valuenow="90"
-                aria-valuemin="0"
-                aria-valuemax="100"
-              >
-                <h5>CSS 90%</h5>
+
+          <!-- Catégorie 2: Back-End & BDD -->
+          <div class="col-12 col-md-4 mb-4">
+            <div class="skills-category-card p-4">
+              <h4 class="category-title"><i class="bi bi-server text-danger mr-2"></i> Back-End & BDD</h4>
+              <div class="skills-grid">
+                <div class="skill-pill">
+                  <a href="https://www.php.net/downloads.php">
+                  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/php.svg" alt="PHP" class="skill-si-icon">
+                  <span>PHP</span>
+                  </a>
+                </div>
+                <div class="skill-pill">
+                  <a href="https://laravel.com/">
+                  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/laravel.svg" alt="Laravel" class="skill-si-icon">
+                  <span>Laravel</span>
+                  </a>
+                </div>
+                <div class="skill-pill">
+                  <a href="https://www.mysql.com/fr/">
+                  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/mysql.svg" alt="MySQL" class="skill-si-icon">
+                  <span>MySQL</span>
+                  </a>
+                </div>
+                <div class="skill-pill">
+                  
+                  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/codeigniter.svg" alt="MVC" class="skill-si-icon">
+                  <span>Architecture MVC</span>
+                  
+                </div>
               </div>
             </div>
           </div>
-          <div class="col-12 col-md-6 col-lg-4 mb-4">
-            <div class="progress">
-              <div
-                class="progress-bar"
-                role="progressbar"
-                style="width: 70%"
-                aria-valuenow="70"
-                aria-valuemin="0"
-                aria-valuemax="100"
-              >
-                <h5>JavaScript 70%</h5>
+
+          <!-- Catégorie 3: Outils & CMS -->
+          <div class="col-12 col-md-4 mb-4">
+            <div class="skills-category-card p-4">
+              <h4 class="category-title"><i class="bi bi-tools text-danger mr-2"></i> Outils & CMS</h4>
+              <div class="skills-grid">
+                <div class="skill-pill">
+                  <a href="https://github.com/signup">
+                  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/github.svg" alt="GitHub" class="skill-si-icon">
+                  <span>GitHub</span>
+                  </a>
+                </div>
+                <div class="skill-pill">
+                  <a href="https://fr.wordpress.org/">
+                  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/wordpress.svg" alt="WordPress" class="skill-si-icon">
+                  <span>WordPress</span>
+                  </a>
+                </div>
+                <div class="skill-pill">
+                  <a href="https://new.drupal.org/home">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/drupal.svg" alt="Drupal" class="skill-si-icon">
+                    <span>Drupal</span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
-          <div class="col-12 col-md-6 col-lg-4 mb-4">
-            <div class="progress">
-              <div
-                class="progress-bar"
-                role="progressbar"
-                style="width: 90%"
-                aria-valuenow="90"
-                aria-valuemin="0"
-                aria-valuemax="100"
-              >
-                <h5>PHP 90%</h5>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-md-6 col-lg-4 mb-4">
-            <div class="progress">
-              <div
-                class="progress-bar"
-                role="progressbar"
-                style="width: 90%"
-                aria-valuenow="90"
-                aria-valuemin="0"
-                aria-valuemax="100"
-              >
-                <h5>Bootstrap 90%</h5>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-md-6 col-lg-4 mb-4">
-            <div class="progress">
-              <div
-                class="progress-bar"
-                role="progressbar"
-                style="width: 95%"
-                aria-valuenow="95"
-                aria-valuemin="0"
-                aria-valuemax="100"
-              >
-                <h5>MySQL 95%</h5>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-md-6 col-lg-4 mb-4">
-            <div class="progress">
-              <div
-                class="progress-bar"
-                role="progressbar"
-                style="width: 60%"
-                aria-valuenow="60"
-                aria-valuemin="0"
-                aria-valuemax="100"
-              >
-                <h5>Laravel 60%</h5>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-md-6 col-lg-4 mb-4">
-            <div class="progress">
-              <div
-                class="progress-bar"
-                role="progressbar"
-                style="width: 60%"
-                aria-valuenow="60"
-                aria-valuemin="0"
-                aria-valuemax="100"
-              >
-                <h5>React JS 60%</h5>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-md-6 col-lg-4 mb-4">
-            <div class="progress">
-              <div
-                class="progress-bar"
-                role="progressbar"
-                style="width: 80%"
-                aria-valuenow="80"
-                aria-valuemin="0"
-                aria-valuemax="100"
-              >
-                <h5>MVC 80%</h5>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-md-6 col-lg-4 mb-4">
-            <div class="progress">
-              <div
-                class="progress-bar"
-                role="progressbar"
-                style="width: 90%"
-                aria-valuenow="90"
-                aria-valuemin="0"
-                aria-valuemax="100"
-              >
-                <h5>Word 90%</h5>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-md-6 col-lg-4 mb-4">
-            <div class="progress">
-              <div
-                class="progress-bar"
-                role="progressbar"
-                style="width: 70%"
-                aria-valuenow="70"
-                aria-valuemin="0"
-                aria-valuemax="100"
-              >
-                <h5>Excel 70%</h5>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-md-6 col-lg-4 mb-4">
-            <div class="progress">
-              <div
-                class="progress-bar"
-                role="progressbar"
-                style="width: 90%"
-                aria-valuenow="90"
-                aria-valuemin="0"
-                aria-valuemax="100"
-              >
-                <h5>PowerPoint 90%</h5>
-              </div>
-            </div>
-          </div>
+
         </div>
       </div>
     </section>
@@ -314,15 +246,15 @@
                 </div>
                 <div class="timeline-body">
                   <p>
-                    Developpement d'un site Web pour une gestion de salle de Gym
+                    Développement d'un site Web pour une gestion de salle de Gym
                   </p>
                   <p>
                     Amélioration du logiciel de l'entreprise avec de nouvelles
                     fonctionnalités
                   </p>
                   <p>
-                    Collaborations avec l'equipe de l'entreprise sur des projets
-                    d'envergures
+                    Collaborations avec l'équipe de l'entreprise sur des projets
+                    d'envergure
                   </p>
                 </div>
               </div>
@@ -343,8 +275,8 @@
                 </div>
                 <div class="timeline-body">
                   <p>
-                    Developpement d'une plateforme moderne de traductions de
-                    langue locales
+                    Développement d'une plateforme moderne de traduction de
+                    langues locales
                   </p>
                   <p>
                     Optimisation des performances de l'application web/mobile
@@ -354,7 +286,6 @@
               </div>
             </div>
           </li>
-          
         </ul>
       </div>
     </section>
@@ -375,7 +306,7 @@
               <div class="timeline-panel">
                 <div class="timeline-heading">
                   <h3>GECOS FORMATION</h3>
-                  <h4>Licence Professionnelle en Genie Logiciel</h4>
+                  <h4>Licence Professionnelle en Génie Logiciel</h4>
                   <p class="text-muted">
                     <span class="bi bi-clock-fill"></span> 2022 - 2025
                   </p>
@@ -398,15 +329,15 @@
                 <div class="timeline-heading">
                   <h3>GECOS FORMATION</h3>
                   <h4>
-                    BREVET DE TECHNICIEN SUPERIEUR EN INFORMATIQUE ET
-                    DEVELOPPEMENT D'APPLICATIONS
+                    BREVET DE TECHNICIEN SUPÉRIEUR EN INFORMATIQUE ET
+                    DÉVELOPPEMENT D'APPLICATIONS
                   </h4>
                   <p class="text-muted">
-                    <span class="bi bi-clock-fill"></span> 2022- 2024
+                    <span class="bi bi-clock-fill"></span> 2022 - 2024
                   </p>
                 </div>
                 <div class="timeline-body">
-                  <p>Obtention du diplôme du Bts</p>
+                  <p>Obtention du diplôme du BTS</p>
                 </div>
               </div>
             </div>
@@ -419,7 +350,7 @@
               <div class="timeline-panel">
                 <div class="timeline-heading">
                   <h3>Formation Autodidacte & Spécialisée Sur UDEMY</h3>
-                  <h4>Développement Web(Laravel, PHP, MySQL,ReactJS,etc...)</h4>
+                  <h4>Développement Web (Laravel, PHP, MySQL, ReactJS, etc...)</h4>
                   <p class="text-muted">
                     <span class="bi bi-clock-fill"></span> 2023 - Présent
                   </p>
@@ -440,8 +371,8 @@
             <div class="timeline-panel-container-inverted">
               <div class="timeline-panel">
                 <div class="timeline-heading">
-                  <h3>COLLEGE SAINT CHALMEL YOPOUGON</h3>
-                  <h4>BACCALAUREAT SERIE D</h4>
+                  <h3>COLLÈGE SAINT CHALMEL YOPOUGON</h3>
+                  <h4>BACCALAURÉAT SÉRIE D</h4>
                   <p class="text-muted">
                     <span class="bi bi-clock-fill"></span> 2022
                   </p>
@@ -488,7 +419,7 @@
             <div class="card portfolio-card">
               <div class="card-body">
                 <h5 class="card-title font-weight-bold">
-                  CV en Ligne interactif
+                  CV en Ligne Interactif
                 </h5>
                 <h6 class="card-subtitle mb-2 text-muted">
                   HTML5 / Bootstrap 4 / CSS3
@@ -498,7 +429,7 @@
                   compétences et mes expériences professionnelles.
                 </p>
                 <a
-                  href="https://github.com/CHRYSOVR"
+                  href="https://github.com/CHRYSOVR/CV_en_ligne_Interactif"
                   target="_blank"
                   class="btn btn-danger btn-sm"
                   >Voir sur GitHub</a
@@ -510,12 +441,12 @@
             <div class="card portfolio-card">
               <div class="card-body">
                 <h5 class="card-title font-weight-bold">
-                  Racourccisseur D'url Express
+                  Raccourcisseur d'URL Express
                 </h5>
-                <h6 class="card-subtitle mb-2 text-muted">PHP/MySql/CSS3</h6>
+                <h6 class="card-subtitle mb-2 text-muted">PHP / MySQL / CSS3</h6>
                 <p class="card-text">
-                  Un racourccisseur interactif permettant de racourccir tous
-                  sortes de lien .
+                  Un raccourcisseur interactif permettant de raccourcir toutes
+                  sortes de liens.
                 </p>
                 <a
                   href="https://github.com/CHRYSOVR/Racourcisseur_D_URL_Express"
@@ -530,11 +461,11 @@
             <div class="card portfolio-card">
               <div class="card-body">
                 <h5 class="card-title font-weight-bold">
-                  Site De Gestion De Salle De GYM
+                  Site de Gestion de Salle de GYM
                 </h5>
-                <h6 class="card-subtitle mb-2 text-muted">PHP/MySql/CSS3/BOSSTRAP</h6>
+                <h6 class="card-subtitle mb-2 text-muted">PHP / MySQL / CSS3 / Bootstrap</h6>
                 <p class="card-text">
-                  Un site web de gestion de salle de gym moderne facilitant les inscriptions et les transactions de la salle .
+                  Un site web de gestion de salle de gym moderne facilitant les inscriptions et les transactions.
                 </p>
                 <a
                   href="https://github.com/CHRYSOVR/gestionSalleDeGym"
@@ -549,11 +480,11 @@
             <div class="card portfolio-card">
               <div class="card-body">
                 <h5 class="card-title font-weight-bold">
-                  Espace Membre classique
+                  Espace Membre Classique
                 </h5>
-                <h6 class="card-subtitle mb-2 text-muted">PHP/MySql/CSS3</h6>
+                <h6 class="card-subtitle mb-2 text-muted">PHP / MySQL / CSS3</h6>
                 <p class="card-text">
-                  Un Espace membre classique en full Php intégrant un envoi via formulaire .
+                  Un espace membre classique en full PHP intégrant un formulaire de contact.
                 </p>
                 <a
                   href="https://github.com/CHRYSOVR/Espace_Membre_Classique"
@@ -568,11 +499,11 @@
             <div class="card portfolio-card">
               <div class="card-body">
                 <h5 class="card-title font-weight-bold">
-                  Espace Membre Comme Netflix
+                  Espace Membre Façon Netflix
                 </h5>
-                <h6 class="card-subtitle mb-2 text-muted">PHP/MySql/CSS3</h6>
+                <h6 class="card-subtitle mb-2 text-muted">PHP / MySQL / CSS3</h6>
                 <p class="card-text">
-                  Un Espace membre pareil à Netflix intégrant un envoi via formulaire.
+                  Un espace membre inspiré de Netflix intégrant un système de gestion utilisateur.
                 </p>
                 <a
                   href="https://github.com/CHRYSOVR/espace_Membre_Comme_Netflix"
@@ -693,5 +624,10 @@
         </p>
       </div>
     </footer>
+
+    <!-- BOUTON RETOUR EN HAUT (FLOTTANT) -->
+    <a href="#about" id="backToTopBtn" class="back-to-top" title="Retour en haut">
+      <i class="bi bi-arrow-up"></i>
+    </a>
   </body>
 </html>
